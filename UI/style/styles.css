@@ -1,0 +1,240 @@
+/*=======================LAYOUT SECTION===================*/
+
+body {
+	  background-color: #dedef4;
+	  font-family: Verdana, Georgia;
+	  font-size: 14px;
+	  /*===font-size: 15px;===*/
+	  margin: 0px;
+}
+
+#header {
+	     background-color: #3b3b3d;
+	     margin: 10px;
+	     height: 90px;
+	     border-radius: 5px;
+}
+
+#navbar ul {
+	        padding: 5px;
+	        list-style-type: none;
+	        text-align: center;
+	        background-color: #000;
+	        margin: 10px;
+	        border-radius: 5px;
+}
+
+#navbar ul li {
+	           display: inline;
+}
+
+#navbar ul li a {
+                 text-decoration: none;
+                 text-transform: uppercase;
+                 font-family: Arial;
+                 font-size: 120%;
+                 font-weight: bolder;
+                 padding: .2em 1em;
+                 color: #fff;
+                 background-color: #000; 
+}
+
+#navbar ul li a:hover {
+                       color: #050a42;
+                       background-color: #04ef0c; 
+}
+
+.main {
+	  background-color: #424268;
+	  margin-top: 10px;
+	  margin-bottom: 10px;
+	  margin-left: 10px;
+	  margin-right: 320px;
+	  border-radius: 5px;
+	  padding: 20px;
+	  font-size: 110%;
+	  
+}
+
+.sideright {
+	        background-color: #424268;
+	        color: #11ff31;
+	        margin-top: 0px;
+	        margin-bottom: 10px;
+	        margin-left: 10px;
+	        margin-right: 10px;
+	        border-radius: 5px;
+	        padding: 20px;
+	        font-size: 105%;
+	        float: right;
+	        width: 260px;
+	        clear: right;
+}
+
+.imagesidebar {
+	        
+	        color: #11ff31;
+	        margin-top: 0px;
+	        margin-bottom: 10px;
+	        margin-left: 10px;
+	        margin-right: 10px;
+	        border-radius: 5px;    
+	        float: right;
+	        width: 300px;
+	        clear: right;
+	        opacity: 1.0;
+	        transition: opacity 0.5s ease-in-out;
+}
+
+.imagesidebar:hover {
+	                 opacity: 0.4;
+}
+
+.picture {
+          margin: 0 5px 0 20px;
+          border-radius: 5px;
+          border: 2px solid black;
+}
+
+#footer {
+	     background-color: #3b3b3d;
+	     margin: 10px;
+	     height: 60px;
+	     clear: both;
+	     border-radius: 5px;
+	     color: #20ef04;
+	     text-align: center;
+	     font-size: 90%
+	     padding: 15px;
+}
+
+#footer ul {
+	        padding: 5px;
+	        list-style-type: none;
+	        text-align: center;
+	        
+	        margin: 10px;
+	        border-radius: 5px;
+}
+
+#footer ul li {
+	           display: inline;
+}
+
+#footer ul li a {
+                 text-decoration: none;
+                 text-transform: uppercase;
+                 font-family: Arial;
+                 font-size: 95%;
+                 font-weight: bolder;
+                 padding: .2em 1em;
+                 color: #f3f4f2;
+                 background-color: #5d5e5c; 
+}
+
+#footer ul li a:hover {
+                       color: #050a42;
+                       background-color: #04ef0c; 
+}
+
+/*=========== HEADINGS SECTION=============*/
+
+h1 {
+	font-size: 120%;
+	color: #efeff2;
+}
+
+h2 {
+	font-size: 110%;
+	color: #efeff2;
+}
+
+h3 {
+	font-size: 250%;
+	text-align: center;
+	color: #20ef04;
+	font-family: "Century Gothic","Gill Sans",Arial;
+	margin: 0px;
+
+	position: relative;
+	 top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+h4 {
+	text-align: justify;
+	margin: 20px;
+}
+
+h5 {
+	text-align: justify;
+	margin: 20px;
+}
+
+p {
+   color: #4eff02;
+   text-align: justify;
+   line-height: 20px;
+}
+
+a {
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+a:hover {
+	     color: yellow;
+	     }
+
+/*=====THE FORM======*/
+
+#theForm {
+	      color: #7ff707; 
+	      display: table;
+	      padding: 15px;
+	      background-color: #07031c;
+	      border: 2px solid green;
+	      margin: 20px;
+}
+
+.row {
+	  display: table-row;
+}
+
+.row label {
+	        display: table-cell;
+	        padding: 2px;
+
+}
+
+.row input {
+	        display: table-cell;
+	        padding: 2px;
+
+}
+
+.submitbutton {
+	           color: #022a2d;
+	           border-radius: 20px;
+	           font-weight: bolder;
+	           font-family: Arial;
+	           margin: 
+}
+
+.submitbutton:hover {
+	                 color: black;
+	                 background-color: #02e9ff;
+	                 margin: 5px;
+}
+
+.table {
+	    padding: 10px;
+	    background-color: #baba9c;
+	    color: black;
+	    margin: 20px;
+	    height: 60px;
+	    border: 3px solid black;
+}
