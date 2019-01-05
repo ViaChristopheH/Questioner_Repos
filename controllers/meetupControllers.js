@@ -133,7 +133,17 @@ class meetings{
     }
 
     static meetupRsvps(req, res){
-        
+
+        const {status} = req.body;
+        const Rsvps = meetupRsvps
+
+        meetupRsvps.push(Rsvps)
+
+         return res.send({
+             status : 201,
+             data : 
+                  meetupRsvps
+         })
     }
 
 
