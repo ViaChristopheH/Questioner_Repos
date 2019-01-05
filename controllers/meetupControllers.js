@@ -47,7 +47,7 @@ class meetings{
         const meetup =  meetupRecords.find( record => record.id ===  Number(id));
        return res.status(200).send({
            status : 200,
-           data : meetupRecords
+           data : meetup
        });
 };
 
@@ -90,14 +90,49 @@ class meetings{
 
     };
     static upvoteQuestion(req, res){
+        const {id} = req.params;
+        const voting = meetupQuestions.find(aQuestion => aQuestion.id === Number(id))
+        voting.votes = voting.votes + 1;
 
+        const {meetup, title, body, votes} = voting;
+        
+        return res.send({
+            status: 201,
+            data : 
+                 [{
+                     meetup,
+                     title,
+                     body,
+                     votes
+                 }]
+
+        });
+        
     }
 
     static downvoteQuestion(req, res){
 
+        const {id} = req.params;
+        const voting = meetupQuestions.find(aQuestion => aQuestion.id === Number(id))
+        voting.votes = voting.votes - 1;
+
+        const {meetup, title, body, votes} = voting;
+        
+        return res.send({
+            status: 201,
+            data : 
+                 [{
+                     meetup,
+                     title,
+                     body,
+                     votes
+                 }]
+
+        });
+
     }
 
-    static meetupRsvp(req, res){
+    static meetupRsvps(req, res){
         
     }
 
