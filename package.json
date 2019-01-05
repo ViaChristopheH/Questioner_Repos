@@ -1,0 +1,29 @@
+{
+  "name": "questioner_hub",
+  "version": "1.0.0",
+  "description": "api-end-points",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "key": "nodemon --exec babel-node --presets env index"
+  },
+  "author": "christophe-h",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.4",
+    "express-fileupload": "^1.1.1-alpha.1",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.1"
+  }
+}
