@@ -1,4 +1,5 @@
 import meetupRecords from '../data/meetupsRecords.js';
+import meetupQuestions from './meetupQuestions';
 
 
 class meetings{
@@ -61,17 +62,33 @@ class meetings{
     };
 
 
-    static meetupQuestions(req, res){
-        return res.status(201).send({
-            status : 201,
-            data:[
-                meetupQuestions
-            ]
-                
+        static meetupQuestions(req, res){
 
-        })
+        const {title, body,} = req.body;
+
+         const Questions ={
+             id : parseInt(meetupQuestions.length + 1),
+             createdOn : new Date(), 
+             createdBy : 2 ,
+             meetup : 5,
+             title,
+             body,
+             votes : 0
+         };
+
+      meetupQuestions.push(Questions);
+
+     return res.status(201).send({
+          status : 201,
+          data : [{
+              user : Questions.createdBy,
+              meetup : Questions.meetup,
+              title,
+              body
+            }]
+      })
+
     };
-
     static upvoteQuestion(req, res){
 
     }
