@@ -1,5 +1,5 @@
 import meetupRecords from '../data/meetupsRecords.js';
-import meetupQuestions from './meetupQuestions';
+import meetupQuestions from '../data/meetupQuestions';
 
 
 class meetings{
@@ -54,7 +54,7 @@ class meetings{
     static fetchUpcomingMeetups(req, res){
         const now = Date.parse(new Date);
         const upcoming = meetupRecords.filter(record => Date.parse(record.happeningOn)>now);
-        
+
         return res.status(200).send({
             status: 200,
             data: upcoming
@@ -131,22 +131,6 @@ class meetings{
         });
 
     }
-
-    static meetupRsvps(req, res){
-
-        const {status} = req.body;
-        const Rsvps = meetupRsvps
-
-        meetupRsvps.push(Rsvps)
-
-         return res.send({
-             status : 201,
-             data : 
-                  meetupRsvps
-         })
-    }
-
-
 }
  
 
