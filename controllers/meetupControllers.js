@@ -52,15 +52,15 @@ class meetings{
 };
 
     static fetchUpcomingMeetups(req, res){
+        const now = Date.parse(new Date);
+        const upcoming = meetupRecords.filter(record => Date.parse(record.happeningOn)>now);
+        
         return res.status(200).send({
-            status : 200,
-            data :[
-                meetupRecords
-            ] 
-                
-        })
-    };
+            status: 200,
+            data: upcoming
+        });
 
+    };
 
         static meetupQuestions(req, res){
 
