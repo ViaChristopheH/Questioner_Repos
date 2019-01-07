@@ -17,6 +17,7 @@ class Rsvps {
 
        meetupRsvps.push(records);
        const meetup = meetupsRecords.find(record => record.id === parseInt(id));
+       
        if(!meetup){
            return res.status(404).send({
                status: 404,
