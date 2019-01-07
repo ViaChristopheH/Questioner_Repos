@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "api-end-points",
   "main": "index.js",
+  "engines": {
+    "node": "8.11.4",
+    "npm": "5.6.0"
+  },
   "scripts": {
     "test": "mocha",
     "key": "nodemon --exec babel-node --presets env index",
