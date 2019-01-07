@@ -1,5 +1,5 @@
 import meetupRecords from '../data/meetupsRecords.js';
-import meetupQuestions from './meetupQuestions';
+import meetupQuestions from '../data/meetupQuestions';
 
 
 class meetings{
@@ -10,6 +10,12 @@ class meetings{
     static createMeetup(req, res){
 
         const { topic, location, happeningOn, tags} = req.body;
+        if (!topic || !location || !happeningOn){
+            return res.status(400).send({
+                status : 400,
+                error : 'All fields are required',
+            })
+        }
 
          const Records ={
              id : parseInt(meetupRecords.length + 1),
@@ -44,27 +50,65 @@ class meetings{
 
     static fetchAmeetup(req, res) {   
         const { id } = req.params;
-        const meetup =  meetupRecords.find( record => record.id ===  Number(id));
-       return res.status(200).send({
-           status : 200,
-           data : meetup
-       });
-};
 
-    static fetchUpcomingMeetups(req, res){
+        if (!Number(id)) 
+        return res.status(400).send({
+            status:400,
+            error : "ID must be a number"
+
+        })
+    
+        const meetup =  meetupRecords.find( record => record.id ===  Number(id));
+
+        if(!meetup) 
+        return res.status(404).send ({
+            status : 404,
+            error : "ID not found"
+
+        }) 
+         
         return res.status(200).send({
             status : 200,
-            data :[
-                meetupRecords
-            ] 
-                
-        })
-    };
+            data : meetup
+        });
 
+        }
+
+       
+
+
+    static fetchUpcomingMeetups(req, res){
+        const now = Date.parse(new Date);
+        const upcoming = meetupRecords.filter(record => Date.parse(record.happeningOn)>now);
+
+         if (!upcoming)
+         return res.status(404).send({
+             status : 404,
+             error : "No upcoming meetup"
+         })
+         
+        return res.status(200).send({
+            status: 200,
+            data: upcoming
+        });
+
+    };
 
         static meetupQuestions(req, res){
 
         const {title, body,} = req.body;
+
+        if (!title)
+         return res.status (400).send({
+             status : 400,
+             error : "Title is required"
+         })
+
+        if (!body)
+        return res.status (400).send({
+            status : 400,
+            error : "Question is required"
+        })
 
          const Questions ={
              id : parseInt(meetupQuestions.length + 1),
@@ -88,7 +132,7 @@ class meetings{
             }]
       })
 
-    };
+    }
     static upvoteQuestion(req, res){
         const {id} = req.params;
         const voting = meetupQuestions.find(aQuestion => aQuestion.id === Number(id))
@@ -131,12 +175,6 @@ class meetings{
         });
 
     }
-
-    static meetupRsvps(req, res){
-        
-    }
-
-
 }
  
 
