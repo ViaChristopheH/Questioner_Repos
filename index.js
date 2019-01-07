@@ -17,3 +17,4 @@ app.listen(port, ()=>{
     console.log('you are listening on port 3000');
 })
 
+export default app;
