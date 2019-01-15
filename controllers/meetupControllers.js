@@ -75,8 +75,6 @@ class meetings{
         }
 
        
-
-
     static fetchUpcomingMeetups(req, res){
         const now = Date.parse(new Date);
         const upcoming = meetupRecords.filter(record => Date.parse(record.happeningOn)>now);

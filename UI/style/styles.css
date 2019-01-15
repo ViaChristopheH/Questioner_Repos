@@ -195,7 +195,7 @@ a:hover {
 	      color: #7ff707; 
 	      display: table;
 	      padding: 15px;
-	      background-color: #07031c;
+	      background-color: #424268;
 	      border: 2px solid green;
 	      margin: 20px;
 }
@@ -221,7 +221,7 @@ a:hover {
 	           border-radius: 20px;
 	           font-weight: bolder;
 	           font-family: Arial;
-	           margin: 
+	           margin: 5px;
 }
 
 .submitbutton:hover {
