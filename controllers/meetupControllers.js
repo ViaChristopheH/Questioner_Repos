@@ -1,6 +1,6 @@
 import meetupRecords from '../data/meetupsRecords.js';
 import meetupQuestions from '../data/meetupQuestions';
-
+import meetupRsvps from '../data/meetupRsvps';
 
 class meetings{
     constructor(){
@@ -47,6 +47,14 @@ class meetings{
             
         })
     };
+
+    static fetchAllrsvps(req, res){
+        return res.status(200).send({
+            status : 200,
+            data : 
+              meetupRsvps
+        })
+    }
 
     static fetchAmeetup(req, res) {   
         const { id } = req.params;
