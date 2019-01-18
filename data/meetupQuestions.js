@@ -5,7 +5,8 @@ const meetupQuestions = [{
    meetup : 5,
    title : 'student claims',
    body : 'all claims concerning students in association',
-   votes : 35,
+   upvotes: 0,
+   downvotes: 0
 }];
 
 export default meetupQuestions;

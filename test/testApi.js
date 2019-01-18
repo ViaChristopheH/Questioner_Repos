@@ -33,7 +33,7 @@ import chai from 'chai';
      it ('/GET /meetupsByID', (done) =>{
 
         chai.request(app)
-            .get('api/v1/meetups/:id')
+            .get('api/v1/meetups/1')
             .end((err, res) =>{
                 res.body.should.be.a('object');
                 res.body.should.have.property('status').eql(200);
@@ -67,7 +67,6 @@ import chai from 'chai';
                 res.body.data[0].should.have.property('title').eql('student claims');
                 res.body.data[0].should.have.property('body').eql('all claims concerning students in association');
                 res.body.data[0].should.have.property('votes').eql(34);
-               done();
                done();
                
 

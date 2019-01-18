@@ -37,7 +37,31 @@ class Rsvps {
        
     }
 
+    static editingRsvps(req, res){
+        const { id } = req.params;
+        
+        const meetup = meetupsRecords.find(record => record.id === parseInt(id));
+        
+        if(!meetup){
+            return res.status(404).send({
+                status: 404,
+                error: 'meetup not found'
+            })
+        }
+         meetup.response = req.body.response;
+        return res.status(201).send({
+            status : 201 ,
+            data : [
+              meetup
+            ]
+        })
+ 
+        
+     }
+    
+
 
 };
+
 
 export default Rsvps;
