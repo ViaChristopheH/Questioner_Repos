@@ -83,11 +83,10 @@ class meetings{
     
         const meetup =  meetupRecords.find( record => record.id ===  Number(id));
 
-        if(!meetup) 
+        if(meetup === undefined) 
         return res.status(404).send ({
             status : 404,
             error : "ID not found"
-
         }) 
          
         return res.status(200).send({
