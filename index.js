@@ -11,6 +11,13 @@ const port = process.env.PORT || 3000;
 
 
 app.use('/api/v1', meetupRoutes);
+app.use('/', (req, res) => {
+    return res.status(200).send({
+    msg: "Welcome to Questioner",
+    POSTMeetup: "api/v1/meetups",
+    GETMeetups: "api/v1/meetups",
+    })
+});
 
 
 app.listen(port, ()=>{
