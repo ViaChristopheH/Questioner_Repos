@@ -127,17 +127,11 @@ class meetings{
 
         //add the validation//
 
-        if (!title)
+        if (error)
          return res.status (400).send({
              status : 400,
-             error : "Title is required"
+             error : error.details[0].message
          })
-
-        if (!body)
-        return res.status (400).send({
-            status : 400,
-            error : "Question is required"
-        })
 // replace from therer the unnecessary ifs//
          const Questions ={
              id : parseInt(meetupQuestions.length + 1),
@@ -163,13 +157,13 @@ class meetings{
 
     }
     static upvoteQuestion(req, res){
-        const {id} = req.params;
-        const voting = meetupQuestions.find(aQuestion => aQuestion.id === Number(id))
+        const id = req.params.id;
+        const voting = meetupQuestions.find(aQuestion => aQuestion.id === parseInt(id, 10));
         voting.upvotes = voting.upvotes + 1;
 
-        const {meetup, title, body, votes} = voting;
+        const {meetup, title, body, upvotes} = voting;
         
-        return res.send({
+        return res.status(201).send({
             status: 201,
             data : 
                  [{
@@ -184,12 +178,11 @@ class meetings{
     }
 
     static downvoteQuestion(req, res){
+        const id = req.params.id;
+        const voting = meetupQuestions.find(aQuestion => aQuestion.id === parseInt(id));
+        voting.downvotes += 1;
 
-        const {id} = req.params;
-        const voting = meetupQuestions.find(aQuestion => aQuestion.id === Number(id))
-        voting.downvotes = voting.downvotes + 1;
-
-        const {meetup, title, body, votes} = voting;
+        const {meetup, title, body, downvotes} = voting;
         
         return res.send({
             status: 201,

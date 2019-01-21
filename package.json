@@ -8,7 +8,7 @@
     "npm": "5.6.0"
   },
   "scripts": {
-    "test": "mocha test/*  --compilers js:babel-core/register",
+    "test": "mocha test/*  --compilers js:babel-core/register --exit",
     "key": "nodemon --exec babel-node index.js",
     "start": "node --require babel-core/register --require babel-polyfill index"
   },
