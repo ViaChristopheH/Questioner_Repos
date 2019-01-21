@@ -85,7 +85,7 @@ User's dashboard...
                                             <div class="row">
                                                 
                                             <p><label for="meetuptitle">Topic: </label></p>
-                                            <p><input type="text" id="meetuptitle" name=""></p>
+                                            <input type="text" id="meetuptitle" name="" class="input1">
         
                                             </div>
                                            </p>
@@ -95,8 +95,7 @@ User's dashboard...
                                                 Description of the meetup: 
                                             <br>
                                             <br>
-                                            <textarea rows="10" cols="80">
-                                            </textarea>
+                                            <textarea rows="10" cols="80" class="textArea"> </textarea>                                           </textarea>
         
                                             <br>
                                             <br>
@@ -110,7 +109,7 @@ User's dashboard...
                                             <br>
                                             <br>
         
-                                            <input type="Date" name="day">
+                                            <input type="date" name="day" class="input1">
         
                                             <br>
                                             <br>
@@ -119,13 +118,22 @@ User's dashboard...
         
                                             <div class="row">
                                             
-                                                   <input class="submitbutton" type="submit" value="Upvotes"> &nbsp; &nbsp; &nbsp;
-                                                   <input class="submitbutton" type="submit" value="Downvotes"> 
-                                                   &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                  <!-- <input class="submitbutton" type="submit" value="Upvotes"> 
+                                                    &nbsp; &nbsp;
+                                                   <input class="submitbutton" type="submit" value="Downvotes"> !-->
+                                                  <div class="num">
+                                                    <button type="button" title="upvote" class="upvote">
+                                                        <img src="../icons/thumb-up-sign.svg" alt="upvote">
+                                                    </button>
+                                                    <h5>124 votes</h5>
+                                                  </div>
+                                                  <div class="num">
+                                                    <button type="button" title="dowvote" class="upvote">
+                                                        <img src="../icons/thumb-down.svg" alt="upvote">
+                                                    </button>
+                                                    <h5>100 downvotes</h5>
+                                                  </div>
+                        
                                                    <input class="submitbutton" type="submit" value="Comments on Meetup #1"> 
                                                                                
                         </fieldset>
@@ -133,66 +141,74 @@ User's dashboard...
                        
                         
                     </form>
-
                     <form id="theForm" action="" method="">
             
-                            <fieldset width="300">
+                        <fieldset width="300">
+                                            
+                                            <p>Meetup #2</p>
+       
+                                            <p>
+                                            
+                                            <div class="row">
                                                 
-                                                <p>Meetup #2</p>
-           
-                                                <p>
-                                                
-                                                <div class="row">
-                                                    
-                                                <p><label for="meetuptitle">Topic: </label></p>
-                                                <p><input type="text" id="meetuptitle" name=""></p>
+                                            <p><label for="meetuptitle">Topic: </label></p>
+                                            <input type="text" id="meetuptitle" name="" class="input1">
+        
+                                            </div>
+                                           </p>
+                                                                         
+                                            <div class="row">
+        
+                                                Description of the meetup: 
+                                            <br>
+                                            <br>
+                                            <textarea rows="10" cols="80" class="textArea"> </textarea>                                           </textarea>
+        
+                                            <br>
+                                            <br>
+        
+                                            </div>
+        
+                                            <div class="row">                                 
+                                            
+                                            Date of the meetup: 
+        
+                                            <br>
+                                            <br>
+        
+                                            <input type="date" name="day" class="input1">
+        
+                                            <br>
+                                            <br>
+                                                                                    
+                                            </div>
+        
+                                            <div class="row">
+                                            
+                                                  <!-- <input class="submitbutton" type="submit" value="Upvotes"> 
+                                                    &nbsp; &nbsp;
+                                                   <input class="submitbutton" type="submit" value="Downvotes"> !-->
+                                                  <div class="num">
+                                                    <button type="button" title="upvote" class="upvote">
+                                                        <img src="../icons/thumb-up-sign.svg" alt="upvote">
+                                                    </button>
+                                                    <h5>124 votes</h5>
+                                                  </div>
+                                                  <div class="num">
+                                                    <button type="button" title="dowvote" class="upvote">
+                                                        <img src="../icons/thumb-down.svg" alt="upvote">
+                                                    </button>
+                                                    <h5>12 downvotes</h5>
+                                                  </div>
             
-                                                </div>
-                                               </p>
-                                                                             
-                                                <div class="row">
-            
-                                                    Description of the meetup: 
-                                                <br>
-                                                <br>
-                                                <textarea rows="10" cols="80">
-                                                </textarea>
-            
-                                                <br>
-                                                <br>
-            
-                                                </div>
-            
-                                                <div class="row">                                 
-                                                
-                                                Date of the meetup: 
-            
-                                                <br>
-                                                <br>
-            
-                                                <input type="Date" name="day">
-            
-                                                <br>
-                                                <br>
-                                                                                        
-                                                </div>
-            
-                                                <div class="row">
-                                                
-                                                       <input class="submitbutton" type="submit" value="Upvotes"> &nbsp; &nbsp; &nbsp;
-                                                       <input class="submitbutton" type="submit" value="Downvotes"> 
-                                                       &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                       <input class="submitbutton" type="submit" value="Comments on Meetup #2"> 
-                                                                                   
-                            </fieldset>
-           
-                           
-                            
-                        </form>
+                                                   <input class="submitbutton" type="submit" value="Comments on Meetup #2"> 
+                                                                               
+                        </fieldset>
+       
+                       
+                        
+                    </form>
+
        
              
             
