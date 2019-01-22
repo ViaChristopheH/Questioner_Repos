@@ -54,7 +54,6 @@ describe('creating a meetup question', () => {
       });
   });
 
-  des
 
   describe('Fetch all upcoming meetups', ()=>{
     it('/GET /meetup/upcoming', (done)=>{
