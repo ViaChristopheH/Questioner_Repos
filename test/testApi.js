@@ -6,6 +6,18 @@ chai.should();
 
 chai.use(chaiHttp);
 
+describe('creating a meetup question', () => {
+    it('should return question created', (done) => {
+
+        chai.request(app)
+        .post('/3/questions')
+        .end((err, res) => {
+            res.body.should.be.a('object');
+            done();
+        });
+    });
+});
+
   describe('fetch out all meetups', () => {
       it('/GET /meetups', (done) => {
 
@@ -15,11 +27,9 @@ chai.use(chaiHttp);
             res.body.should.be.a('object');
             res.body.should.have.property('status').eql(200);           
             done();
-        })
-      })
+        });
+      });
   });
-
-
 
   describe('GET/ Specific meetup', () => {
       it('Should return meetup id should be a number', (done) => {
@@ -32,6 +42,19 @@ chai.use(chaiHttp);
           });
       });
   });
+
+  describe('Fetch all Rsvps', () => {
+      it('/GEt /meetups/Rsvps', (done) => {
+          chai.request(app)
+          .post('/2/rsvps')
+          .end((err, res) =>{
+              res.body.should.be.a('object');
+              done();
+          });
+      });
+  });
+
+  des
 
   describe('Fetch all upcoming meetups', ()=>{
     it('/GET /meetup/upcoming', (done)=>{

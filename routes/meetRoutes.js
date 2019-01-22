@@ -18,5 +18,6 @@ route.post('/:id/questions', meetupfx.meetupQuestions);
 route.post('/:id/rsvps', meetupRsvpsController.bookingRsvps);
 // Edit Rsvps
 route.put('/:id/rsvps', meetupRsvpsController.editingRsvps);
+// fetch meetup questions
 
 export default route;
