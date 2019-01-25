@@ -8,10 +8,10 @@
     "npm": "5.6.0"
   },
   "scripts": {
-    "test": "nyc --reporter=html --reporter=text --timeout=1500 mocha --require babel-polyfill --require babel-register ./test/* --exit",
+    "test": "nyc --reporter=html --reporter=text --timeout=1500 mocha --require babel-polyfill --require babel-register ./server/test/* --exit",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "key": "nodemon --exec babel-node index.js",
-    "start": "node --require babel-core/register --require babel-polyfill index"
+    "key": "nodemon --exec babel-node ./server/index.js",
+    "start": "node --require babel-core/register --require babel-polyfill ./server/index"
   },
   "author": "christophe-h",
   "license": "ISC",

@@ -185,6 +185,8 @@ h4 {
 h5 {
 	text-align: justify;
 	margin: 20px;
+	padding: 5px;
+	
 }
 
 h6 {
@@ -197,6 +199,7 @@ p {
    color: #4eff02;
    text-align: justify;
    line-height: 20px;
+   
 }
 
 a {

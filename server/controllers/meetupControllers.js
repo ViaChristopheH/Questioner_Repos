@@ -1,6 +1,7 @@
 import meetupRecords from '../data/meetupsRecords.js';
 import meetupQuestions from '../data/meetupQuestions';
 import meetupRsvps from '../data/meetupRsvps';
+import validation from '../helpers/validation';
 import joi from 'joi';
 
 class meetings{
@@ -10,14 +11,7 @@ class meetings{
 
     static createMeetup(req, res){
         const { topic, location, happeningOn, tags} = req.body;
-
-        const schema = joi.object().keys({
-        topic: joi.string().min(3).max(100).required(),
-        location: joi.string().min(3).max(100).required(),
-        happeningOn: joi.string().required(),
-        tags: joi.required()
-          });
-        const{ error }= joi.validate(req.body,schema);
+        const{ error }= joi.validate(req.body,validation.meetup);
         if(error){
             return res.status(400).send({
                 status : 400,
@@ -117,13 +111,7 @@ class meetings{
         static meetupQuestions(req, res){
 
         const {title, body,} = req.body;
-
-        const schema = joi.object().keys({
-            title: joi.string().min(3).required(),
-            body: joi.string().min(3).required()
-            
-              });
-            const{ error }= joi.validate(req.body,schema);
+            const{ error }= joi.validate(req.body,validation.question);
 
         //add the validation//
 
